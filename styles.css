@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+}
+
+body {
+	font-family: Marfa, system-ui, -apple-system, BlinkMacSystemFont,
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.title {
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	gap: 20px;
+	text-align: center;
+}
+
+.card {
+	flex-grow: 1;
+	margin: 1rem;
+	border-radius: 3px;
+	box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+	background-color: var(--secondary-color);
+	position: relative;
+	overflow: hidden;
+}
