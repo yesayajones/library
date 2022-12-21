@@ -1,5 +1,13 @@
 let myLibrary = ['Paradise', 'Hell', 'Heaven', 'Mountain'];
 let container = document.querySelector('.container');
+const addBookModal = document.getElementById('addBookModal');
+const overlay = document.getElementById('overlay');
+let add_new = document.getElementById('new');
+
+add_new.addEventListener('click', () => {
+	addBookModal.classList.add('active');
+	overlay.classList.add('active');
+});
 
 function Book(title, author, pages, read) {
 	this.title = title;
