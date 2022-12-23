@@ -1,6 +1,9 @@
 *,
 *::before,
 *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -8,6 +11,7 @@ body {
 	font-family: Marfa, system-ui, -apple-system, BlinkMacSystemFont,
 		'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
+	margin: 20px;
 	margin-bottom: 100px;
 	font-weight: 500;
 }
@@ -33,34 +37,72 @@ input[type='number'] {
 }
 
 .container {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	gap: 40px;
-	margin-top: 40px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+	flex-wrap: wrap;
 }
 
-.card {
+.book-card {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	font-size: 20px;
 	gap: 20px;
 	padding: 20px;
+	border: solid 2px black;
 	border-radius: 8px;
 	background-color: #fffbfb;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 	line-height: 1.2;
+	width: 30%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-lg);
+}
+
+.btn {
+	padding: var(--spacing-sm) var(--spacing-md);
+	border-radius: var(--border-radius);
+	transition: filter 0.15s ease-in-out;
+}
+
+.btn:hover {
+	filter: brightness(90%);
+}
+
+.btn-add {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.btn-light-green {
+	background-color: var(--light-green);
+}
+
+.btn-light-red {
+	background-color: var(--light-red);
 }
 
 #new {
 	font-size: 20px;
-	padding: 20px;
+	padding: 10px 20px;
 	border: solid 2px rgba(210, 210, 210, 0.3);
 	border-radius: 8px;
 	background-color: #fffbfb;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 	margin: auto;
 	display: block;
+}
+
+#new:hover {
+	box-shadow: rgba(238, 236, 241, 0.678) 0px 1px 4px;
+	background-color: #f0eef1;
 }
 
 /* MODALS */
